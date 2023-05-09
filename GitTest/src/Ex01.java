@@ -13,6 +13,7 @@ public class Ex01 {
 		
 		
 		System.out.println("키킼ㅋ키");
+		System.out.println("왜 나는 주석 문자 안오냐고");
 		
 		
 		
