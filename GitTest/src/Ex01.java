@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Ex01 {
 
@@ -17,7 +18,9 @@ public class Ex01 {
 		
 		// 미니프로젝트 주제: 학원탈출
 		// 1. 스캐너 이용해서 이름 입력 받고 이름 나오는 부분 전부 name변수 처리
-				
+				Scanner sc = new Scanner(System.in);
+				System.out.print("이름을 입력하세요 : ");
+				int name = sc.nextInt();
 		// 2. 보기를 통해 상황을 부여하여 탈출하는 방식
 				
 		// 3. 각자 한층씩 상황을 상상하여 만든 후 상의
