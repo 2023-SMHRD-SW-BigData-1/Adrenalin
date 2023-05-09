@@ -8,7 +8,7 @@ public class Ex01 {
 		// 1. 스캐너 이용해서 이름 입력 받고 이름 나오는 부분 전부 name변수 처리
 				Scanner sc = new Scanner(System.in);
 				System.out.print("이름을 입력하세요 : ");
-				int name = sc.nextInt();
+				String name = sc.next();
 		// 2. 보기를 통해 상황을 부여하여 탈출하는 방식
 				System.out.println(name+"은 종례시간이 되었다. 어떻게 할까?");
 				System.out.println("1. 지문을 찍고 집에가서 잔다.    2. 지문은 제끼고 후다닥 나간다.");
