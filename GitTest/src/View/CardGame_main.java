@@ -27,7 +27,7 @@ public class CardGame_main {
 			System.out.println("잘가세요.");
 		}
 		
-		
+		 
 		while(true) {
 			System.out.print("[1] 회원가입 [2] 로그인 [3]게임시작 : ");
 			
