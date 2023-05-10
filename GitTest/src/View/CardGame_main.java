@@ -29,7 +29,7 @@ public class CardGame_main {
 			System.out.println("다시한번 물어봅니다. 게임 하기 싫습니까?");
 
 			String choice2 = sc.next();
-
+ 
 			if (choice2.equals("y")) {
 				System.out.println("잘가세연.");
 			} else if (choice.equals("n")) {
