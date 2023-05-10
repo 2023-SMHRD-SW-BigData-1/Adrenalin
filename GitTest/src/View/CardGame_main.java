@@ -12,8 +12,9 @@ public class CardGame_main {
 		
 		while(true) {
 			System.out.print("[1] 회원가입 [2] 로그인 [3]게임시작 : ");
+			
 			int num = sc.nextInt();
-
+ 
 			if(num==1) {
 				System.out.print("id 입력 : ");
 				String id = sc.next();
