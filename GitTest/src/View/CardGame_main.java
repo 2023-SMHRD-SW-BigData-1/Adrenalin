@@ -22,7 +22,7 @@ public class CardGame_main {
 		System.out.print("게임에 참여하시겠습니까?(y or n) >> ");
 		String choice = sc.next();
 		if(choice =="y") { 
-			
+			 
 		}else if(choice=="n") {
 			System.out.println("잘가세요.");
 		}
