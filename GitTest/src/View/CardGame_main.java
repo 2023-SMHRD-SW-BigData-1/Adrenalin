@@ -8,48 +8,85 @@ public class CardGame_main {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("=====블랙잭 게임!!!====");
+		Random rd = new Random();
 		
-		System.out.println("당신은 블랙잭 게임에 참여하였습니다.");
-		System.out.println("당신과 상대방의 카드에는 랜덤의 숫자로 각각 5장씩 부여됩니다");
-		System.out.println("그 중 가장 높은 번호의 카드 2장을 선택하세요");
-		System.out.println("그 2장의 번호의 합이 상대방보다 클 경우 이길것입니다.");
-		System.out.println("다만 당신에게는 게임을 할 수 있는 3번의 기회가 있는데");
-		System.out.println("상대방 카드의 합 보다 작을경우 당신이 게임에 참여할 수 있는 기회는 한번씩 사라지게 될것입니다.");
-		System.out.println("상대방 보다 높은 숫자가 나올때마다 당신은 +3점씩 점수를 얻게 됩니다.");
-		System.out.println("10점이상의 점수를 얻을 경우 당신은 최종 승리를 하게 됩니다.");
-		
-		System.out.print("게임에 참여하시겠습니까?(y or n) >> ");
-		String choice = sc.next();
-		if(choice =="y") { 
-			
-		}else if(choice=="n") {
-			System.out.println("잘가세요.");
-		}
-		
-		
-		while(true) {
-			System.out.print("[1] 회원가입 [2] 로그인 [3]게임시작 : ");
-			
-			int num = sc.nextInt();
- 
-			if(num==1) {
-				System.out.print("id 입력 : ");
-				String id = sc.next();
-				System.out.print("pw 입력 : ");
-				String pw = sc.next();
-				 
+		int CardArr[] = new int[5];
+
+		while (true) {
+			System.out.print("1. 카드뽑기 2. 종료.");
+			int select = sc.nextInt();
+
+			if (select == 1) {
+				for (int i = 0; i < CardArr.length; i++) {
+					CardArr[i] = rd.nextInt(10) + 1;
+
+					for (int j = 0; j < i; j++) {
+						if (CardArr[i] == CardArr[j]) {
+							i--;
+							break;
+						}
+					}
+				}
+				System.out.println("새로운 카드를 뽑습니다!!");
+				for (int i = 0; i < CardArr.length; i++) {
+					System.out.print(CardArr[i] + " ");
+				}
+				System.out.println();
+
+				System.out.println("카드를 고르시오.");
+				int num = sc.nextInt();
+				int num2 = sc.nextInt();
+				int MyCard = CardArr[num - 1] + CardArr[num2 - 1];
+				System.out.println("나의 카드의 합은 " + MyCard +"입니다.");
+				System.out.println("게임을 시작합니다.");
+
+				int CardArr2[] = new int[5];
+				Random rd2 = new Random();
+
+				for (int i = 0; i < CardArr2.length; i++) {
+					CardArr2[i] = rd2.nextInt(10) + 1;
+
+					for (int j = 0; j < i; j++) {
+						if (CardArr2[i] == CardArr2[j]) {
+							i--;
+							break;
+						}
+					}
+				}
+				System.out.print("상대의 카드 : ");
+				for (int i = 0; i < CardArr2.length; i++) {
+					System.out.print(CardArr2[i] + " ");
+				}
+				System.out.println();
+				System.out.print("상대의 카드의 합 : ");
+
+				int first = CardArr2[0];
+				int second = CardArr2[0];
+				for (int i = 1; i < CardArr2.length; i++) {
+					if (CardArr2[i] > first) {
+						second = first;
+						first = CardArr2[i];
+					} else if (CardArr2[i] > second && CardArr2[i] != first) {
+						second = CardArr2[i];
+					}
+				}
+				
+				int YourCard = first + second;
+				System.out.print(first + second);
+				System.out.println();
+
+				if (MyCard > YourCard) {
+					System.out.println("1라운드 승리! +3점");
+				} else if (MyCard == YourCard) {
+					System.out.println("1라운드 비김. +1점");
+				} else {
+					System.out.println("1라운드 패배 ㅠ 목숨 -1");
+				}
+			} else {
+				System.out.println("게임을 종료합니다.");
+				break;
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-
 	}
 
 }

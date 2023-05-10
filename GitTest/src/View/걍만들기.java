@@ -59,8 +59,8 @@ public class 걍만들기 {
 				System.out.println();
 				System.out.print("상대의 카드의 합: ");
 
-				int first = CardArr2[0];
-				int second = CardArr2[0];
+				int first = 0;
+				int second = 0;
 				for (int i = 1; i < CardArr2.length; i++) {
 					if (CardArr2[i] > first) {
 						second = first;
