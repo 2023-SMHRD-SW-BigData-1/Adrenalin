@@ -3,7 +3,7 @@ package View;
 import java.util.Random;
 import java.util.Scanner;
 
-public class 걍만들기 {
+public class main에모두담기 {
 
 	public static void main(String[] args) {
 
