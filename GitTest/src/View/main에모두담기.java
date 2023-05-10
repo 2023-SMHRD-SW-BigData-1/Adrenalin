@@ -85,5 +85,6 @@ public class main에모두담기 {
 				break;
 			}
 		}
+		System.out.println("수고하셨습니다.");
 	}
 }
