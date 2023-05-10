@@ -41,11 +41,11 @@ public class main에모두담기 {
 				}
 				
 				for (int i = 0; i < CardArr.length; i++) {
-					System.out.print(CardArr[i] + " ");
+					System.out.print((i+1)+"번 카드 : "+CardArr[i] + "\t");
 				}
 				System.out.println();
 
-				System.out.println("카드를 고르시오.");
+				System.out.println("카드를 고르시오. (띄어쓰기 조심..)");
 				int first=0;
 				int second=0;
 
