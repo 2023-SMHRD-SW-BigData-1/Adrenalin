@@ -119,7 +119,8 @@ public class main에모두담기 {
 					System.out.println("현재 점수 : " + score + "   현재 목숨 : " + life);
 				}
 				round++;
-
+				System.out.println();
+				
 			} else if (select == 2) {
 				System.out.println("게임 종료.");
 				break;
