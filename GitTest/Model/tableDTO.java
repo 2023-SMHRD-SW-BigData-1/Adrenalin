@@ -1,6 +1,8 @@
 package Model;
 
-public class CardGameDTO {
+import java.util.Random;
+
+public class tableDTO {
 
 	//아이디
 	private String id;
@@ -9,9 +11,15 @@ public class CardGameDTO {
 	private String pw;
 
 	// 생성자
-	public CardGameDTO(String id, String pw) {
+	public tableDTO(String id, String pw) {
 		this.id = id;
 		this.pw = pw;
+	}
+
+	public tableDTO(int myCard, int[] cardArr, int first, int second) {
+	}
+
+	public tableDTO(int[] cardArr, Random rd) {
 	}
 
 	public String getId() {
