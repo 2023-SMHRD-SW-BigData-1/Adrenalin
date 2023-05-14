@@ -20,8 +20,8 @@ public class jdbcDAO {
       // 동적로딩 -- 어떤 클래스파일의 어떤 데이터베이스를 사용 할 것인지
       try {
          Class.forName("oracle.jdbc.driver.OracleDriver");
-         String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-         String db_id = "service";
+         String url = "jdbc:oracle:thin:@172.30.1.30:1521:xe";
+         String db_id = "mini";
          String db_pw = "12345";
 
          Conn = DriverManager.getConnection(url, db_id, db_pw);
@@ -53,23 +53,23 @@ public class jdbcDAO {
    }
 
    public int insertMember(String id, String pw) {
-      getConn();
+		getConn();
 
-      String sql = "insert into gamemember values (?,?)";
-      try {
-         psmt = Conn.prepareStatement(sql);
-         psmt.setString(1, id);
-         psmt.setString(2, pw);
+		String sql = "insert into gamemember values (?,?)";
+		try {
+			psmt = Conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			psmt.setString(2, pw);
 
-         row = psmt.executeUpdate();
+			row = psmt.executeUpdate();
 
-      } catch (SQLException e) {
-         e.printStackTrace();
-      } finally {
-         getClose();
-      }
-      return row;
-   }
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			getClose();
+		}
+		return row;
+	}
 
    public jdbcDTO login(String id, String pw) {
       getConn();
