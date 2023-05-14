@@ -61,7 +61,7 @@ public class CardGame_main {
 			System.out.println("상대방 보다 높은 숫자가 나올때마다 당신은 +3점씩 점수를 얻게 됩니다.");
 			System.out.println("10점이상의 점수를 얻을 경우 당신은 최종 승리를 하게 됩니다.");
 			while (true) {
-				System.out.print("[1] 회원가입 [2] 로그인 [3]명예의 전당 [4] 종료 : ");
+				System.out.print("[1] 회원가입 [2] 로그인 [3] 명예의 전당 [4] 종료 : ");
 
 				int number = sc.nextInt();
 
