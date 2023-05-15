@@ -23,8 +23,8 @@ public class CardGame_main {
 		rankingDAO rdao = new rankingDAO();
 
 		mp3.play("C:\\Users\\smhrd\\git\\Adrenalin\\GitTest\\music\\Play!.mp3");
-		System.out.println("=====블랙잭 게임!!!====");
-		System.out.println("⢀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⣀⣀⣀⣀⣀⢀⣀⣀⣀⡀⠀\r\n"
+		System.out.println("=====카드 게임!!!====");
+		System.out.println("⢀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⠀⠀⣀⣀⣀⣀⣀⢀⣀⣀⣀⡀⠀\r\n"		         
 				+ "⣼⣿⠿⠿⠿⠿⠿⢿⣿⡿⠿⣿⣿⣿⠿⠿⠿⠿⠿⠿⠿⠿⠿⣿⣿⡿⠿⠿⠿⣿⡿⠿⢿⡿⠿⣿⣷⣿⣿⠿⠛⠿⣿⣿⠛⢿⣿⡆\r\n"
 				+ "⣿⣿⣤⣤⣤⣤⠀⢀⣿⡇⠀⣿⣿⣿⠀⠀⣤⣤⣤⣤⣤⣤⣤⣿⣿⣧⣤⣄⠀⢸⡇⠀⢸⡇⠀⣿⣿⡏⠀⣠⣶⣄⠀⢻⣿⠀⢸⣿⡇\r\n"
 				+ "⣼⣿⠿⠿⠿⠿⠀⢸⣿⡇⠀⣿⣿⣿⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠸⠇⠀⢸⡇⠀⣿⣿⡇⠀⢿⣿⡿⠀⢸⣿⠀⢸⣿⡇\r\n"
@@ -32,7 +32,8 @@ public class CardGame_main {
 				+ "⣿⣿⣿⣿⡿⠁⢠⣾⣿⡇⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣾⣿⠃⠀⣿⡇⠀⢸⡇⠀⣿⣿⣿⠋⠉⠉⠉⠉⠉⠉⠀⢸⣿⡇\r\n"
 				+ "⣿⣿⠛⠉⣀⣴⣿⣿⣿⡇⠀⣿⣿⡟⠛⠛⠛⠛⠛⠛⠛⠛⠛⢿⣿⠟⠁⣠⣾⣿⡇⠀⢸⡇⠀⣿⣿⣿⠀⠀⡿⠿⠷⠶⠶⠀⢸⣿⡇\r\n"
 				+ " ⣿⣶⣿⣿⣿⣿⣿⣿⣇⣀⣿⣿⣷⣶⣶⣶⣶⣶⣶⣶⣶⣶⣾⣿⣷⣾⣿⣿⣿⣇⣀⣸⣇⣀⣿⣿⣿⣦⣤⣄⣀⣀⣀⣀⣀⣸⣿⠇\r\n"
-				+ "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀");
+				+ "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀");
+
 
 		System.out.print("게임에 참여하시겠습니까?(y or n) >> ");
 		String choice = sc.next();
@@ -41,7 +42,7 @@ public class CardGame_main {
 				mp3.stop();
 			}
 			System.out.println("잘가세요.");
-
+			
 		} else if (choice.equals("y")) {
 			System.out.println("당신은 블랙잭 게임에 참여하였습니다.");
 			System.out.println("당신과 상대방의 카드에는 랜덤의 숫자로 각각 5장씩 부여됩니다");
@@ -49,8 +50,8 @@ public class CardGame_main {
 			System.out.println("그 2장의 번호의 합이 상대방보다 클 경우 이길것입니다.");
 			System.out.println("다만 당신에게는 게임을 할 수 있는 3번의 기회가 있는데");
 			System.out.println("상대방 카드의 합 보다 작을경우 당신이 게임에 참여할 수 있는 기회는 한번씩 사라지게 될것입니다.");
-			System.out.println("상대방 보다 높은 숫자가 나올때마다 당신은 +3점씩 점수를 얻게 됩니다.");
-			System.out.println("10점이상의 점수를 얻을 경우 당신은 최종 승리를 하게 됩니다.");
+			System.out.println("상대방 보다 높은 숫자가 나올때마다 당신은 +3점씩 점수를 얻게 됩니다(비길시 점수 +1).");
+			System.out.println("10점이상의 점수를 얻을 경우 당신은 최종 승리를 하게 되고, 명예의 전당에 올라갑니다.");
 			while (true) {
 				System.out.print("[1] 회원가입 [2] 로그인 [3] 명예의 전당 [4] 종료 : ");
 
@@ -168,7 +169,7 @@ public class CardGame_main {
 								}
 								int MyCard = CardArr[num - 1] + CardArr[num2 - 1];
 								mp3.stop();
-//                        System.out.println("게임을 시작합니다.");
+
 								System.out.println("나의 카드의 합: " + MyCard);
 								CardArr2 = tc.newCard(CardArr2);
 
@@ -199,8 +200,10 @@ public class CardGame_main {
 									System.out.println("현재 점수 : " + score + "   현재 목숨 : " + life);
 								}
 								round++;
-								System.out.println();
-
+								System.out.print("1번을 누르면 메뉴로 돌아갑니다.");
+								sc.next();
+								
+								
 							} else if (select == 2) {
 								System.out.println("게임 종료.");
 								break;

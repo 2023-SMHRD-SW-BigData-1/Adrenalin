@@ -5,7 +5,7 @@ import java.util.Random;
 import Model.tableDTO;
 
 public class TableController {
-//data access object -- db 
+
 	Random rd = new Random();
 	Random rd2 = new Random();
 
