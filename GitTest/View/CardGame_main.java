@@ -50,7 +50,7 @@ public class CardGame_main {
 			System.out.println("다만 당신에게는 게임을 할 수 있는 3번의 기회가 있는데");
 			System.out.println("상대방 카드의 합 보다 작을경우 당신이 게임에 참여할 수 있는 기회는 한번씩 사라지게 될것입니다.");
 			System.out.println("상대방 보다 높은 숫자가 나올때마다 당신은 +3점씩 점수를 얻게 됩니다(비길시 점수 +1).");
-			System.out.println("10점이상의 점수를 얻을 경우 당신은 최종 승리를 하게 되고,명예의 전당에 올라갑니다.");
+			System.out.println("10점이상의 점수를 얻을 경우 당신은 최종 승리를 하게 되고, 명예의 전당에 올라갑니다.");
 			while (true) {
 				System.out.print("[1] 회원가입 [2] 로그인 [3] 명예의 전당 [4] 종료 : ");
 
