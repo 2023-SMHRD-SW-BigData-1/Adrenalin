@@ -53,23 +53,23 @@ public class jdbcDAO {
    }
 
    public int insertMember(String id, String pw) {
-      getConn();
+		getConn();
 
-      String sql = "insert into gamemember values (?,?)";
-      try {
-         psmt = Conn.prepareStatement(sql);
-         psmt.setString(1, id);
-         psmt.setString(2, pw);
+		String sql = "insert into gamemember values (?,?)";
+		try {
+			psmt = Conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			psmt.setString(2, pw);
 
-         row = psmt.executeUpdate();
+			row = psmt.executeUpdate();
 
-      } catch (SQLException e) {
-         e.printStackTrace();
-      } finally {
-         getClose();
-      }
-      return row;
-   }
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			getClose();
+		}
+		return row;
+	}
 
    public jdbcDTO login(String id, String pw) {
       getConn();

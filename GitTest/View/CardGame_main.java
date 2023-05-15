@@ -1,11 +1,14 @@
 package View;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 import Controller.TableController;
 import Model.jdbcDAO;
 import Model.jdbcDTO;
+import Model.rankingDAO;
+import Model.rankingDTO;
 import Model.tableDTO;
 import javazoom.jl.player.MP3Player;
 
@@ -16,6 +19,7 @@ public class CardGame_main {
 		Scanner sc = new Scanner(System.in);
 		jdbcDAO cdao = new jdbcDAO();
 		TableController tc = new TableController();
+		rankingDAO rdao = new rankingDAO();
 
 		mp3.play("C:\\Users\\smhrd\\git\\Adrenalin\\GitTest\\music\\Play!.mp3");
 		System.out.println("=====블랙잭 게임!!!====");
@@ -57,7 +61,7 @@ public class CardGame_main {
 			System.out.println("상대방 보다 높은 숫자가 나올때마다 당신은 +3점씩 점수를 얻게 됩니다.");
 			System.out.println("10점이상의 점수를 얻을 경우 당신은 최종 승리를 하게 됩니다.");
 			while (true) {
-				System.out.print("[1] 회원가입 [2] 로그인 [3]종료 : ");
+				System.out.print("[1] 회원가입 [2] 로그인 [3] 명예의 전당 [4] 종료 : ");
 
 				int number = sc.nextInt();
 
@@ -209,6 +213,10 @@ public class CardGame_main {
 							}
 							if (score >= 10) {
 								System.out.println("게임 승리!!!");
+								int row = rdao.insertRanking(id, round, score, life);
+								if (row > 0) {
+									System.out.println("명예의 전당 등록.");
+								}
 								break;
 							}
 							if (life == 0) {
@@ -222,13 +230,19 @@ public class CardGame_main {
 					}
 
 				} else if (number == 3) {
+					ArrayList<rankingDTO> dtoList = rdao.ViewRanking();
+					for (int i = 0; i < dtoList.size(); i++)
+						System.out.println(dtoList.get(i).getId() + " / " + dtoList.get(i).getRound() + " / "
+								+ dtoList.get(i).getScore() + " / " + dtoList.get(i).getLife());
+				} else if (number == 4) {
 					System.out.println("종료합니다.");
 					mp3.stop();
 					break;
 				}
 			}
+
 		}
 
 	}
-
+	
 }
