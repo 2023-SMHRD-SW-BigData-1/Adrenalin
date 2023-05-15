@@ -76,7 +76,7 @@ public class rankingDAO {
 	
 	public ArrayList<rankingDTO> ViewRanking() {
 		
-		String sql = "select * from ranking";
+		String sql = "select * from ranking order by score desc , life desc, round";
 		rankingDTO rdto = null;
 		ArrayList<rankingDTO> dtoList = new ArrayList<>();
 
@@ -85,6 +85,7 @@ public class rankingDAO {
 			psmt = Conn.prepareStatement(sql);
 
 			rs = psmt.executeQuery();
+			System.out.println("ID"+" \t"+"ROUND"+" \t"+"SCORE"+" \t"+"LIFE");
 			
 			while (rs.next()) {
 				
